@@ -7,14 +7,24 @@ import ArtPage from './art'
 import CodePage from './code'
 import ContactPage from './contact'
 class Layout extends Component {
+  constructor () {
+    super();
+    this.state = {
+      title: "CG"
+    }
+  }
   render() {
+    const bgStyle = {
+      backgroundColor: "#2196F3"
+    }
     return (
       <div>
-        <MaterialNav/>
+        <div className="bg" style={bgStyle}/>
+        <MaterialNav title={this.state.title}/>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route path='/code' component={CodePage}/>
-          <Route path='/art' component={ArtPage}/>
+          <Route path='/code'  component={CodePage}/>
+          <Route path='/art'  component={ArtPage}/>
           <Route path='/contact' component={ContactPage}/>
         </Switch>
       </div>

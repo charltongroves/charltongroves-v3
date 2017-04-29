@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
-import logo from '../../img/logo.svg';
+import Island from '../../img/island.svg';
 import '../../css/home.css';
 class Home extends Component {
   render() {
+    const styles = {
+      container : {
+        maxWidth:"1200px",
+        margin: "0 auto",
+        textAlign: "center",
+      },
+      heroText: {
+        fontSize: "5rem",
+        color: "#fff",
+        fontWeight: "100"
+      },
+      mastHead : {
+        width: "100%",
+      }
+    }
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div style={styles.container}>
+        <h1 style={styles.heroText} > Hello, I'm Charlie </h1>
+        <img style={styles.mastHead} src={Island} />
       </div>
     );
   }
