@@ -33,7 +33,7 @@ class CodeStore extends EventEmitter {
                 why: "",
             },
             {
-                name: "SyncUQ",
+                name: "",
                 desc: "Thing",
                 imgurl: "../../img/logo.svg",
                 what: "",

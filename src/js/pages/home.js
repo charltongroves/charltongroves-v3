@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Island from '../../img/island.svg';
+import ParalaxMast from '../components/ParalaxMast.js'
 import '../../css/home.css';
 class Home extends Component {
   render() {
@@ -10,7 +10,7 @@ class Home extends Component {
         textAlign: "center",
       },
       heroText: {
-        fontSize: "5rem",
+        fontSize: "20rem",
         color: "#fff",
         fontWeight: "100"
       },
@@ -19,9 +19,9 @@ class Home extends Component {
       }
     }
     return (
-      <div style={styles.container}>
-        <h1 style={styles.heroText} > Hello, I'm Charlie </h1>
-        <img style={styles.mastHead} src={Island} />
+      <div className="easeIn" style={styles.container}>
+        <h1 style={styles.heroText} > Hello</h1>
+        <ParalaxMast />
       </div>
     );
   }

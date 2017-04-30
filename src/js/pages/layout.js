@@ -6,6 +6,8 @@ import HomePage from './home'
 import ArtPage from './art'
 import CodePage from './code'
 import ContactPage from './contact'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup' // ES6
+
 class Layout extends Component {
   constructor () {
     super();
@@ -15,18 +17,25 @@ class Layout extends Component {
   }
   render() {
     const bgStyle = {
-      backgroundColor: "#2196F3"
+      backgroundColor: "#98dafc"
     }
     return (
       <div>
+        
         <div className="bg" style={bgStyle}/>
-        <MaterialNav title={this.state.title}/>
+        <MaterialNav currentRoute={this.props.history.location} title={this.state.title}/>
+        <CSSTransitionGroup
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route path='/code'  component={CodePage}/>
+          <Route exact path='/code'  component={CodePage}/>
+          <Route path='/code/:cardName'  component={CodePage}/>
           <Route path='/art'  component={ArtPage}/>
           <Route path='/contact' component={ContactPage}/>
         </Switch>
+        </CSSTransitionGroup>
       </div>
     );
   }
