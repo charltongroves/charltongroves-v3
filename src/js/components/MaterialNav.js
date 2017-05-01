@@ -13,7 +13,7 @@ class MaterialNav extends Component {
     super(props);
     this.state = {
       navOpen: false,
-      currentUrl: props.currentUrl
+      currentRoute: props.currentRoute
     };
   }
   handleToggle = () => this.setState({
@@ -21,6 +21,7 @@ class MaterialNav extends Component {
   });
 
   handleClose = () => this.setState({navOpen: false});
+
   render() {
     const transp = {
       backgroundColor: 'rgba(0,0,0,0)',
@@ -40,7 +41,7 @@ class MaterialNav extends Component {
           onLeftIconButtonTouchTap={this.handleToggle}
           title={this.props.title}
           iconElementLeft={<IconButton><NavigationMenu /></IconButton>}
-          iconElementRight={<MaterialTabs currentUrl={this.state.currentUrl}/>}
+          iconElementRight={<MaterialTabs currentRoute={this.state.currentRoute}/>}
           iconStyleLeft={iconStyle}
           zDepth={0}/>
           

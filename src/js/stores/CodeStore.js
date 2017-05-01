@@ -58,6 +58,7 @@ class CodeStore extends EventEmitter {
     getAllCards() {
         return this.codeCards;
     }
+    get
 
 }
 const codeStore = new CodeStore();

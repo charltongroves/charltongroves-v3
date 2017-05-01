@@ -9,10 +9,10 @@ import ContactPage from './contact'
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup' // ES6
 
 class Layout extends Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
-      title: "CG"
+      title: "CG",
     }
   }
   render() {
@@ -23,7 +23,7 @@ class Layout extends Component {
       <div>
         
         <div className="bg" style={bgStyle}/>
-        <MaterialNav currentRoute={this.props.history.location} title={this.state.title}/>
+        <MaterialNav currentRoute={this.props.location.pathname} title={this.state.title}/>
         <CSSTransitionGroup
           transitionName="example"
           transitionEnterTimeout={500}
