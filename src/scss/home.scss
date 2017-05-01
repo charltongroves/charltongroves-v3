@@ -1,12 +1,22 @@
-
-
-*{
+* {
   box-sizing: border-box;
 }
 
-html,
-body{
+html {
+  overflow-y: scroll;
 }
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.heroText {
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
 .parallax-cont {
   height: 100vh;
   overflow-x: hidden;
@@ -16,8 +26,9 @@ body{
   right: 0;
   bottom: 0;
 }
+
 .parallax {
-  perspective: 100px;
+  perspective: 80px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -29,40 +40,59 @@ body{
   margin-left: -1500px;
 }
 
-.parallax__layer{
-
+.parallax__layer {
   position: absolute;
-  top: 0;
+  top: -150px;
   right: 0;
-  bottom: 0;
+  bottom: 150px;
   left: 0;
-  
-  img{
+  animation-name: display;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+  img {
     display: block;
     position: absolute;
     bottom: 0;
   }
 }
 
-.parallax__cover{
+.parallax__cover {
   background-color: #09271B;
   position: absolute;
-  top: 100%;
+  top: calc(100% - 150px);
   left: 0;
   right: 0;
   height: 130vh;
   z-index: 2;
 }
 
-$parallax__layers: 6;
+.parallax__layer__6 {
+  transform: translateZ(0px) scale(1);
+  img {
+    filter: hue-rotate(210deg)
+  }
+}
 
-@for $i from 0 through $parallax__layers {
+$parallax__layers: 6;
+@for $i from 1 through $parallax__layers - 1 {
   $x: ($parallax__layers - $i) / 2;
   $bright: (($parallax__layers - $i)/6.0);
-  .parallax__layer__#{$i}{
-     transform: translateZ(-100 * $x#{px}) scale($x + 1);
-     img {
-       filter: hue-rotate(210deg)
-     }
+  .parallax__layer__#{$i} {
+    transform: translateZ(-100 * $x#{px}) scale($x + 1);
+    animation-name: display;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: $x * 0.4s;
+    animation-duration: 1s;
+    img {
+      filter: hue-rotate(210deg)
+    }
+  }
+}
+
+@keyframes display {
+  to {
+    opacity: 1;
   }
 }

@@ -5,6 +5,7 @@ import Third from '../../img/third.png';
 import Fourth from '../../img/fourth.png';
 import Fifth from '../../img/fifth.png';
 import Sixth from '../../img/sixth.png';
+import About from './About.js'
 export default() =>
     <div className="parallax">
         <div className="easeIn parallax__layer parallax__layer__1">
@@ -26,5 +27,6 @@ export default() =>
             <img src={First}/>
         </div>
         <div className="parallax__cover">
+            <About />
         </div>
     </div>

@@ -14,7 +14,7 @@ import Layout from "./js/pages/layout"
 injectTapEventPlugin();
 
 const muiTheme = getMuiTheme({
-  fontFamily: 'Roboto, sans-serif',
+  fontFamily: 'Lato, sans-serif',
   palette: {
     primary1Color: cyan500,
     primary2Color: cyan700,

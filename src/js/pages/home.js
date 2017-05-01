@@ -10,9 +10,9 @@ class Home extends Component {
         textAlign: "center",
       },
       heroText: {
-        fontSize: "20rem",
-        color: "#fff",
-        fontWeight: "100"
+        fontSize: "15rem",
+        color: "rgba(255,255,255,0.8)",
+        fontWeight: "500"
       },
       mastHead : {
         width: "100%",
@@ -20,7 +20,7 @@ class Home extends Component {
     }
     return (
       <div className="easeIn" style={styles.container}>
-        <h1 style={styles.heroText} > Hello</h1>
+        <h1 className="heroText" > hello</h1>
         <ParalaxMast />
       </div>
     );

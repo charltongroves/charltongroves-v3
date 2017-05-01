@@ -15,8 +15,6 @@ class Code extends Component {
       cardActiveName: props.match.params.cardName
     }
     this.props = props
-    console.log(this.props)
-    console.log(this.state)
   }
   getActiveCodeCard() {
     for (let card of this.state.codeCards) {
@@ -34,19 +32,17 @@ class Code extends Component {
       margin: "12px"
     }
     const CardOverlay = (this.state.cardActiveName)
-      ? <CodeInfo {...this.getActiveCodeCard()}/>
+      ? <CodeInfo info={this.getActiveCodeCard()}/>
       : null
     const disableScroll = (CardOverlay)
       ? {
-        height: "90vh",
-        overflowY: "hidden"
       }
       : {}
     const containerStyle = {
       display: "flex",
       flexWrap: "wrap",
-      margin: "0 auto",
-      justifyContent: "space-around",
+      margin: "1rem auto",
+      justifyContent: "center",
       maxWidth: "1000px"
     }
     const currentRoute = "/code"
@@ -60,7 +56,26 @@ class Code extends Component {
           </Link>
         );
       });
-
+    const styles = {
+      h1: {
+        color: "#fff",
+        fontWeight: 300
+      },
+      h2 :{
+        color: "#fff",
+        fontWeight: 300
+      },
+      textCont: {
+        flex: "0 0 100rem",
+        textAlign: "center",
+        maxWidth: "600px",
+        margin: "0 auto",
+        clear: "both"
+      },
+      newLine: {
+        width: "100%"
+      }
+    }
     return (
       <div
         className="easeIn"
@@ -69,6 +84,13 @@ class Code extends Component {
         ...disableScroll
       }}>
         {CardOverlay}
+        <div style={styles.newLine}>
+        <div style={styles.textCont}>
+            <h1 style={styles.h1}> I love programming </h1>
+            <h3 style={styles.h2}> I have experience in front end engineering, backend engineering, data analysis, systems programming, and large scale OOP programming </h3>
+            <p style={styles.h2}> Take a look at some of my recent projects below </p>
+        </div>
+        </div>
         {CodeCardComponents}
       </div>
     );

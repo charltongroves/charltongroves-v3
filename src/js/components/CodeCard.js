@@ -3,6 +3,7 @@ import {
     Card,
     CardMedia,
     CardTitle,
+    CardText,
 } from 'material-ui/Card';
 import Easle from '../../img/easle.svg';
 import transitions from 'material-ui/styles/transitions';
@@ -11,7 +12,6 @@ import transitions from 'material-ui/styles/transitions';
 class CodeCard extends Component {
     constructor(props) {
         super();
-        console.log(props)
     }
     handleMouseEnter = () => {
         this.setState({zDepth: 4});
@@ -21,11 +21,16 @@ class CodeCard extends Component {
         this.setState({zDepth: 0});
     };
     render() {
-        const {name, desc} = this.props
+        const {name, desc, date} = this.props
         const styles = {
             paper: {
                 transition: transitions.easeOut(),
                 width: '300px'
+            },
+            date: {
+                color: "rgba(0,0,0,0.6)",
+                padding: "0px 16px 8px 16px",
+                fontSize: "0.8rem"
             }
         }
         return (
@@ -40,6 +45,7 @@ class CodeCard extends Component {
                     <img src={Easle} alt="easle"/>
                 </CardMedia>
                 <CardTitle title={name} subtitle={desc}/>
+                <CardText style={styles.date}>{date}</CardText>
             </Card>
         )
     }

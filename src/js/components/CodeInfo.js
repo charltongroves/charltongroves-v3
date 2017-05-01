@@ -7,7 +7,7 @@ class CodeInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            info: this.props
+            info: this.props.info
         }
         console.log(props)
     }
@@ -32,12 +32,11 @@ class CodeInfo extends Component {
             paper: {
                 width: "90vw",
                 maxWidth: "1000px",
-                minHeight: "90vh",
-                margin: "auto",
-                textAlign: 'center',
+                margin: " 4rem auto",
+                textAlign: 'left',
                 position: 'relative',
                 zIndex: "1400",
-                marginTop: "4rem"
+                padding: "2rem"
             },
             greyOut: {
                 position: "fixed",
@@ -59,24 +58,68 @@ class CodeInfo extends Component {
             mediumIcon: {
                 width: 36,
                 height: 36
+            },
+            title: {
+                fontSize: "2rem"
+            },
+            heading: {
+                fontSize: "1.5rem"
+            },
+            p: {},
+            contentCont: {
+                display: "flex",
+                flexWrap: "wrap",
+                width: "100%"
+            },
+            textCont: {
+                maxWidth: "100%",
+                flex: "2 0 20rem"
+            },
+            linksCont: {
+                flex: "1 0 0"
             }
+
         }
         const info = this.state.info
+        const demo = (info.demo)
+            ? <div>
+                    <h3>Demo</h3>
+                    <a href={info.demo}>{info.demo}
+                    </a>
+                </div>
+            : null
         return (
             <div className="easeIn" style={styles.cont}>
                 <div style={styles.greyOut}/>
                 <Paper style={styles.paper} zDepth={5} rounded={false}>
                     <Link to="/code">
-                    <IconButton
-                        iconStyle= {styles.mediumIcon}
-                        style= {styles.mediumButton}>
-                        <CloseIcon/>
-                    </IconButton>
+                        <IconButton iconStyle={styles.mediumIcon} style={styles.mediumButton}>
+                            <CloseIcon/>
+                        </IconButton>
                     </Link>
-                    <h1>{info.name}</h1>
-                    <h1>
-                        {info.desc}
-                    </h1>
+                    <div style={styles.contentCont}>
+                        <div style={styles.textCont}>
+                            <h1 style={styles.title}>{info.name}</h1>
+                            <h2 style={styles.heading}>What
+                            </h2>
+                            <p style={styles.p}>{info.what}</p>
+                            <h2 style={styles.heading}>How
+                            </h2>
+                            <p style={styles.p}>{info.how}</p>
+                            <h2 style={styles.heading}>Why
+                            </h2>
+                            <p style={styles.p}>{info.why}</p>
+                        </div>
+                        <div style={styles.linksCont}>
+                            <h3>
+                                Techs/Tools
+                            </h3>
+                            <p>
+                                {info.techs}
+                            </p>
+                            {demo}
+                        </div>
+                    </div>
                 </Paper>
             </div>
         );

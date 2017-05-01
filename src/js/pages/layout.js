@@ -21,7 +21,6 @@ class Layout extends Component {
     }
     return (
       <div>
-        
         <div className="bg" style={bgStyle}/>
         <MaterialNav currentRoute={this.props.location.pathname} title={this.state.title}/>
         <CSSTransitionGroup
