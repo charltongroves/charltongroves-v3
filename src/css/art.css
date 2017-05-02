@@ -1,24 +1,24 @@
-.App {
-  text-align: center;
-}
+.arrow {
+  position: absolute;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: 0;
+  z-index: 2; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.arrow-next {
+  right: -25px; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+.arrow-prev {
+  left: -25px; }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/*# sourceMappingURL=art.css.map */
