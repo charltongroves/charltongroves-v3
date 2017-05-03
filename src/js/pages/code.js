@@ -79,10 +79,7 @@ class Code extends Component {
     return (
       <div
         className="easeIn"
-        style={{
-        ...containerStyle,
-        ...disableScroll
-      }}>
+       >
         {CardOverlay}
         <div style={styles.newLine}>
         <div style={styles.textCont}>
@@ -91,7 +88,12 @@ class Code extends Component {
             <p style={styles.h2}> Take a look at some of my recent projects below </p>
         </div>
         </div>
+        <div  style={{
+        ...containerStyle,
+        ...disableScroll
+      }} className="code-card-wrap" >
         {CodeCardComponents}
+        </div>
       </div>
     );
   }

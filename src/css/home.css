@@ -50,7 +50,7 @@ body {
     bottom: 0; }
 
 .parallax__cover {
-  background-color: #09271B;
+  background-color: #0c2714;
   position: absolute;
   top: calc(100% - 152px);
   left: 0;
@@ -58,20 +58,15 @@ body {
   height: 130vh;
   z-index: 2; }
 
-.parallax__layer__6 {
-  transform: translateZ(0px) scale(1); }
-  .parallax__layer__6 img {
-    filter: hue-rotate(210deg); }
-
 .parallax__layer__1 {
   transform: translateZ(-250px) scale(3.5);
   animation-name: display;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 1s;
-  animation-duration: 1s; }
+  animation-duration: 0.5s; }
   .parallax__layer__1 img {
-    filter: hue-rotate(210deg); }
+    filter: hue-rotate(200deg); }
 
 .parallax__layer__2 {
   transform: translateZ(-200px) scale(3);
@@ -79,9 +74,9 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 0.8s;
-  animation-duration: 1s; }
+  animation-duration: 0.5s; }
   .parallax__layer__2 img {
-    filter: hue-rotate(210deg); }
+    filter: hue-rotate(200deg); }
 
 .parallax__layer__3 {
   transform: translateZ(-150px) scale(2.5);
@@ -89,9 +84,9 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 0.6s;
-  animation-duration: 1s; }
+  animation-duration: 0.5s; }
   .parallax__layer__3 img {
-    filter: hue-rotate(210deg); }
+    filter: hue-rotate(200deg); }
 
 .parallax__layer__4 {
   transform: translateZ(-100px) scale(2);
@@ -99,9 +94,9 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 0.4s;
-  animation-duration: 1s; }
+  animation-duration: 0.5s; }
   .parallax__layer__4 img {
-    filter: hue-rotate(210deg); }
+    filter: hue-rotate(200deg); }
 
 .parallax__layer__5 {
   transform: translateZ(-50px) scale(1.5);
@@ -109,9 +104,19 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease;
   animation-delay: 0.2s;
-  animation-duration: 1s; }
+  animation-duration: 0.5s; }
   .parallax__layer__5 img {
-    filter: hue-rotate(210deg); }
+    filter: hue-rotate(200deg); }
+
+.parallax__layer__6 {
+  transform: translateZ(0px) scale(1);
+  animation-name: display;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-duration: 0.5s; }
+  .parallax__layer__6 img {
+    filter: hue-rotate(200deg); }
 
 @keyframes display {
   to {

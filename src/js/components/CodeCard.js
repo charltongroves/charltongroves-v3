@@ -7,7 +7,7 @@ import {
 } from 'material-ui/Card';
 import Easle from '../../img/easle.svg';
 import transitions from 'material-ui/styles/transitions';
-
+import MaterialTextLogo from './MaterialTextLogo'
 
 class CodeCard extends Component {
     constructor(props) {
@@ -42,7 +42,7 @@ class CodeCard extends Component {
                 ...styles.paper
             }}>
                 <CardMedia>
-                    <img src={Easle} alt="easle"/>
+                    <MaterialTextLogo text={name} color="#f00" />
                 </CardMedia>
                 <CardTitle title={name} subtitle={desc}/>
                 <CardText style={styles.date}>{date}</CardText>

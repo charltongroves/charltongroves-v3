@@ -5,9 +5,11 @@ class Home extends Component {
   render() {
     const styles = {
       container : {
-        maxWidth:"1200px",
+        width: "100vw",
+        height: "100vh",
         margin: "0 auto",
         textAlign: "center",
+        background: "linear-gradient(#53A6DB, #fff)"
       },
       heroText: {
         fontSize: "15rem",
@@ -20,7 +22,7 @@ class Home extends Component {
     }
     return (
       <div className="easeIn" style={styles.container}>
-        <h1 className="heroText" > hello</h1>
+        <h1 className="heroText" ></h1>
         <ParalaxMast />
       </div>
     );

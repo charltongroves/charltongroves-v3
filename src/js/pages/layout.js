@@ -17,7 +17,7 @@ class Layout extends Component {
   }
   render() {
     const bgStyle = {
-      backgroundColor: "#98dafc"
+      backgroundColor: "#53A6DB"
     }
     return (
       <div>

@@ -58,7 +58,7 @@ body {
 }
 
 .parallax__cover {
-  background-color: #09271B;
+  background-color: hsl(138, 53%, 10%);
   position: absolute;
   top: calc(100% - 152px);
   left: 0;
@@ -67,15 +67,9 @@ body {
   z-index: 2;
 }
 
-.parallax__layer__6 {
-  transform: translateZ(0px) scale(1);
-  img {
-    filter: hue-rotate(210deg)
-  }
-}
 
 $parallax__layers: 6;
-@for $i from 1 through $parallax__layers - 1 {
+@for $i from 1 through $parallax__layers {
   $x: ($parallax__layers - $i) / 2;
   $bright: (($parallax__layers - $i)/6.0);
   .parallax__layer__#{$i} {
@@ -84,9 +78,9 @@ $parallax__layers: 6;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
     animation-delay: $x * 0.4s;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     img {
-      filter: hue-rotate(210deg)
+      filter: hue-rotate(200deg)
     }
   }
 }

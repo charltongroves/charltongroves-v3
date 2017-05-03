@@ -1,0 +1,66 @@
+.icon-logo {
+  font-size: 80px;
+  color: white;
+  height: 301px;
+  width: 301px;
+  line-height: 301px;
+  border-radius: 0%;
+  text-align: center; }
+
+.gen-logo {
+  margin: 0; }
+
+.text-logo {
+  font-size: 80px;
+  color: white;
+  height: 300px;
+  width: 300px;
+  line-height: 300px;
+  border-radius: 0%;
+  text-align: center; }
+
+.code-card-wrap a:nth-child(4n) .gen-logo {
+  text-shadow: #b34949 0px 0px 0px, #b54a4a 1px 1px 0px, #b84b4b 2px 2px 0px, #ba4c4c 3px 3px 0px, #bd4d4d 4px 4px 0px, #bf4e4e 5px 5px 0px, #c24f4f 6px 6px 0px, #c45050 7px 7px 0px, #c75151 8px 8px 0px, #c95252 9px 9px 0px, #cc5353 10px 10px 0px, #cf5454 11px 11px 0px, #d15555 12px 12px 0px, #d45656 13px 13px 0px, #d65757 14px 14px 0px, #d95858 15px 15px 0px, #db5959 16px 16px 0px, #de5a5a 17px 17px 0px, #e05c5c 18px 18px 0px, #e35d5d 19px 19px 0px, #e65e5e 20px 20px 0px, #e85f5f 21px 21px 0px, #eb6060 22px 22px 0px, #ed6161 23px 23px 0px, #f06262 24px 24px 0px, #f26363 25px 25px 0px, #f56464 26px 26px 0px, #f76565 27px 27px 0px, #fa6666 28px 28px 0px, #fc6767 29px 29px 0px;
+  font-size: 80px;
+  color: white;
+  height: 300px;
+  width: 300px;
+  line-height: 300px;
+  border-radius: 0%;
+  text-align: center;
+  background-color: #ff6868; }
+
+.code-card-wrap a:nth-child(4n - 1) .gen-logo {
+  text-shadow: #b38249 0px 0px 0px, #b5844a 1px 1px 0px, #b8864b 2px 2px 0px, #ba884c 3px 3px 0px, #bd8a4d 4px 4px 0px, #bf8c4e 5px 5px 0px, #c28d4f 6px 6px 0px, #c48f50 7px 7px 0px, #c79151 8px 8px 0px, #c99352 9px 9px 0px, #cc9553 10px 10px 0px, #cf9754 11px 11px 0px, #d19955 12px 12px 0px, #d49a56 13px 13px 0px, #d69c57 14px 14px 0px, #d99e58 15px 15px 0px, #dba059 16px 16px 0px, #dea25a 17px 17px 0px, #e0a45c 18px 18px 0px, #e3a65d 19px 19px 0px, #e6a75e 20px 20px 0px, #e8a95f 21px 21px 0px, #ebab60 22px 22px 0px, #edad61 23px 23px 0px, #f0af62 24px 24px 0px, #f2b163 25px 25px 0px, #f5b364 26px 26px 0px, #f7b465 27px 27px 0px, #fab666 28px 28px 0px, #fcb867 29px 29px 0px;
+  font-size: 80px;
+  color: white;
+  height: 300px;
+  width: 300px;
+  line-height: 300px;
+  border-radius: 0%;
+  text-align: center;
+  background-color: #ffba68; }
+
+.code-card-wrap a:nth-child(4n - 2) .gen-logo {
+  text-shadow: #208f4f 0px 0px 0px, #219150 1px 1px 0px, #219351 2px 2px 0px, #229552 3px 3px 0px, #229754 4px 4px 0px, #239955 5px 5px 0px, #239b56 6px 6px 0px, #239d57 7px 7px 0px, #249f58 8px 8px 0px, #24a159 9px 9px 0px, #25a35a 10px 10px 0px, #25a55c 11px 11px 0px, #26a75d 12px 12px 0px, #26a95e 13px 13px 0px, #27ab5f 14px 14px 0px, #27ad60 15px 15px 0px, #28af61 16px 16px 0px, #28b162 17px 17px 0px, #28b463 18px 18px 0px, #29b665 19px 19px 0px, #29b866 20px 20px 0px, #2aba67 21px 21px 0px, #2abc68 22px 22px 0px, #2bbe69 23px 23px 0px, #2bc06a 24px 24px 0px, #2cc26b 25px 25px 0px, #2cc46c 26px 26px 0px, #2dc66e 27px 27px 0px, #2dc86f 28px 28px 0px, #2eca70 29px 29px 0px;
+  font-size: 80px;
+  color: white;
+  height: 300px;
+  width: 300px;
+  line-height: 300px;
+  border-radius: 0%;
+  text-align: center;
+  background-color: #2ecc71; }
+
+.code-card-wrap a:nth-child(4n - 3) .gen-logo {
+  text-shadow: #6d3e7f 0px 0px 0px, #6e3f81 1px 1px 0px, #704083 2px 2px 0px, #714185 3px 3px 0px, #734287 4px 4px 0px, #744389 5px 5px 0px, #76448a 6px 6px 0px, #77458c 7px 7px 0px, #79458e 8px 8px 0px, #7a4690 9px 9px 0px, #7c4792 10px 10px 0px, #7e4893 11px 11px 0px, #7f4995 12px 12px 0px, #814a97 13px 13px 0px, #824b99 14px 14px 0px, #844c9b 15px 15px 0px, #854d9d 16px 16px 0px, #874d9e 17px 17px 0px, #884ea0 18px 18px 0px, #8a4fa2 19px 19px 0px, #8c50a4 20px 20px 0px, #8d51a6 21px 21px 0px, #8f52a7 22px 22px 0px, #9053a9 23px 23px 0px, #9254ab 24px 24px 0px, #9355ad 25px 25px 0px, #9555af 26px 26px 0px, #9656b1 27px 27px 0px, #9857b2 28px 28px 0px, #9958b4 29px 29px 0px;
+  font-size: 80px;
+  color: white;
+  height: 300px;
+  width: 300px;
+  line-height: 300px;
+  border-radius: 0%;
+  text-align: center;
+  background-color: #9b59b6; }
+
+/*# sourceMappingURL=code.css.map */
