@@ -2,6 +2,8 @@ import {EventEmitter} from "events";
 import SyncUQImg from "../../img/syncuq.png"
 import RGAimg from "../../img/rgaBanner.jpg"
 import duXCOMimg from "../../img/duxcombanner.jpg"
+import DriveSafeimg from "../../img/drivesafeimg.jpg"
+import Punctualityimg from "../../img/punctuality.JPG"
 class CodeStore extends EventEmitter {
     constructor() {
         super()
@@ -53,7 +55,7 @@ class CodeStore extends EventEmitter {
                 name: "DriveSafe",
                 desc: "First place solution to Brisbane Unearthed Hackathon",
                 date: "apr 2017",
-                imgurl: "../../img/logo.svg",
+                imgurl: DriveSafeimg,
                 what: "A multiplatform webapp that processes IVMS data into easy to read feedback on ho" +
                         "w you are driving. Its aim to encourage drivers to drive safer, and to provide a" +
                         " much needed digital overhaul to the current office health and saftey drive repo" +
@@ -75,7 +77,7 @@ class CodeStore extends EventEmitter {
                 name: "Punctuality",
                 desc: "A widget that allows managers to see a succint overview of their employee",
                 date: "mar 2017",
-                imgurl: "../../img/logo.svg",
+                imgurl: Punctualityimg,
                 what: "A widget that allows managers to see a succint overview of their employees 'punc" +
                         "tuality data'",
                 how: "Punctuality was written in JS/jQuery/CSS, it used moment.js, d3.js, and a few ot" +
@@ -85,7 +87,7 @@ class CodeStore extends EventEmitter {
                 github: "",
                 logoIcon: "date_range",
                 logoText: "",
-                demo: "https://www.google.com",
+                demo: "https://my.mixtape.moe/cprfbt.mp4",
                 photo: ""
             }, {
                 name: "Pings",
