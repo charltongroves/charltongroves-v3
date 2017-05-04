@@ -71,7 +71,7 @@ class CodeStore extends EventEmitter {
                 github: "",
                 logoIcon: "directions_car",
                 logoText: "",
-                demo: "",
+                demo: "http://charltongroves.com/prog/drivesafe#solution",
                 photo: ""
             }, {
                 name: "Punctuality",

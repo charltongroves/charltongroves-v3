@@ -8,7 +8,7 @@ class About extends Component {
                 textAlign: "center",
                 left: "50%",
                 paddingLeft: "calc(1500px - 50vw)",
-                marginTop: "2rem"
+                marginTop: "2rem",
             },
             h: {
                 fontWeight: 100,

@@ -16,7 +16,7 @@ $vertOffset: 0px;
 }
 
 .parallax-cont {
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
   position: absolute;
@@ -27,7 +27,7 @@ $vertOffset: 0px;
 
 .parallax {
   perspective: $perspective;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: visible;
   position: fixed;
@@ -106,7 +106,8 @@ $vertOffset: 0px;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 90vh;
+    height: 1200px;
+    overflow-y: hidden;
     z-index: 2;
   }
   $parallax__layers: 6;

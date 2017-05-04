@@ -10,7 +10,7 @@ html {
   font-weight: 500; }
 
 .parallax-cont {
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
   position: absolute;
@@ -20,7 +20,7 @@ html {
 
 .parallax {
   perspective: 100px;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: visible;
   position: fixed;
@@ -87,7 +87,8 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 90vh;
+  height: 1200px;
+  overflow-y: hidden;
   z-index: 2; }
 
 .parallax__layer__1 {
