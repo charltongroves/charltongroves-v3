@@ -1,11 +1,17 @@
 * {
   box-sizing: border-box;
 }
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(210, 80%, 70%);
+}
 html {
   overflow-y: scroll;
 }
 .bg {
-    position: fixed;
+}
+.bg-fixed {
     top: 0;
     left:0;
     height: 100vh;

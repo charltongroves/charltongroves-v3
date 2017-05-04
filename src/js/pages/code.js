@@ -18,7 +18,7 @@ class Code extends Component {
   }
   getActiveCodeCard() {
     for (let card of this.state.codeCards) {
-      if (card.name == this.state.cardActiveName) {
+      if (card.name === this.state.cardActiveName) {
         return card
       }
     }
@@ -51,7 +51,7 @@ class Code extends Component {
       .codeCards
       .map((codeCard) => {
         return (
-          <Link to={currentRoute + "/" + codeCard.name} onClick={this.handleOnLinkClick}>
+          <Link key={codeCard.name} to={currentRoute + "/" + codeCard.name} onClick={this.handleOnLinkClick}>
             <CodeCard style={cardStyle} key={codeCard.name} {...codeCard}/>
           </Link>
         );
@@ -69,12 +69,13 @@ class Code extends Component {
         flex: "0 0 100rem",
         textAlign: "center",
         maxWidth: "600px",
-        margin: "0 auto",
+        padding: "0 1rem",
+        margin: "2rem auto 0 auto",
         clear: "both"
       },
       newLine: {
         width: "100%"
-      }
+      },
     }
     return (
       <div

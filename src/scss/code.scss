@@ -1,69 +1,77 @@
+$sat: 69%;
+$satshad: 64%;
+$light: 67%;
+$lightshad: 62%;
+
+
+$color1: hsl(-10, 80%, 70%);
+$color2: hsl(20, 90%, 70%);
+$color3: hsl(240, 70%, 73%);
+$color4: hsl(-70, 60%, 65%);
+$shadowleng: 10;
+
+@function setLongShadow($color, $length) {
+    $value: 0 0 $color;
+ 
+    @for $i from 1 through $length {
+        $value: #{$value}, #{$i}px #{$i}px #{$color};
+    }
+ 
+    @return $value;
+}
+ 
+@mixin longShadow($color) {
+    text-shadow: setLongShadow($color, $shadowleng);
+}
+
 .icon-logo {
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    height: 301px;
-    width: 301px;
-    line-height: 301px;
+    font-size: 180px !important;
+    color: #fff !important;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+    line-height: 300px;
     border-radius: 0%;
     text-align: center;
 }
 .gen-logo {
-    margin: 0;
+    margin: 0 ;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 .text-logo {
     font-size: 80px;
-    color: rgb(255, 255, 255);
+    color: #fff;
     height: 300px;
     width: 300px;
+    overflow: hidden !important;
     line-height: 300px;
     border-radius: 0%;
     text-align: center;
 }
-
 .code-card-wrap a:nth-child(4n) .gen-logo {
-    text-shadow: rgb(179, 73, 73) 0px 0px 0px, rgb(181, 74, 74) 1px 1px 0px, rgb(184, 75, 75) 2px 2px 0px, rgb(186, 76, 76) 3px 3px 0px, rgb(189, 77, 77) 4px 4px 0px, rgb(191, 78, 78) 5px 5px 0px, rgb(194, 79, 79) 6px 6px 0px, rgb(196, 80, 80) 7px 7px 0px, rgb(199, 81, 81) 8px 8px 0px, rgb(201, 82, 82) 9px 9px 0px, rgb(204, 83, 83) 10px 10px 0px, rgb(207, 84, 84) 11px 11px 0px, rgb(209, 85, 85) 12px 12px 0px, rgb(212, 86, 86) 13px 13px 0px, rgb(214, 87, 87) 14px 14px 0px, rgb(217, 88, 88) 15px 15px 0px, rgb(219, 89, 89) 16px 16px 0px, rgb(222, 90, 90) 17px 17px 0px, rgb(224, 92, 92) 18px 18px 0px, rgb(227, 93, 93) 19px 19px 0px, rgb(230, 94, 94) 20px 20px 0px, rgb(232, 95, 95) 21px 21px 0px, rgb(235, 96, 96) 22px 22px 0px, rgb(237, 97, 97) 23px 23px 0px, rgb(240, 98, 98) 24px 24px 0px, rgb(242, 99, 99) 25px 25px 0px, rgb(245, 100, 100) 26px 26px 0px, rgb(247, 101, 101) 27px 27px 0px, rgb(250, 102, 102) 28px 28px 0px, rgb(252, 103, 103) 29px 29px 0px;
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    height: 300px;
-    width: 300px;
-    line-height: 300px;
-    border-radius: 0%;
-    text-align: center;
-    background-color: rgb(255, 104, 104);
+    @include longShadow(darken($color1, 10%));
+    background-color: $color1 !important;
 }
-
 .code-card-wrap a:nth-child(4n - 1) .gen-logo {
-    text-shadow: rgb(179, 130, 73) 0px 0px 0px, rgb(181, 132, 74) 1px 1px 0px, rgb(184, 134, 75) 2px 2px 0px, rgb(186, 136, 76) 3px 3px 0px, rgb(189, 138, 77) 4px 4px 0px, rgb(191, 140, 78) 5px 5px 0px, rgb(194, 141, 79) 6px 6px 0px, rgb(196, 143, 80) 7px 7px 0px, rgb(199, 145, 81) 8px 8px 0px, rgb(201, 147, 82) 9px 9px 0px, rgb(204, 149, 83) 10px 10px 0px, rgb(207, 151, 84) 11px 11px 0px, rgb(209, 153, 85) 12px 12px 0px, rgb(212, 154, 86) 13px 13px 0px, rgb(214, 156, 87) 14px 14px 0px, rgb(217, 158, 88) 15px 15px 0px, rgb(219, 160, 89) 16px 16px 0px, rgb(222, 162, 90) 17px 17px 0px, rgb(224, 164, 92) 18px 18px 0px, rgb(227, 166, 93) 19px 19px 0px, rgb(230, 167, 94) 20px 20px 0px, rgb(232, 169, 95) 21px 21px 0px, rgb(235, 171, 96) 22px 22px 0px, rgb(237, 173, 97) 23px 23px 0px, rgb(240, 175, 98) 24px 24px 0px, rgb(242, 177, 99) 25px 25px 0px, rgb(245, 179, 100) 26px 26px 0px, rgb(247, 180, 101) 27px 27px 0px, rgb(250, 182, 102) 28px 28px 0px, rgb(252, 184, 103) 29px 29px 0px;
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    height: 300px;
-    width: 300px;
-    line-height: 300px;
-    border-radius: 0%;
-    text-align: center;
-    background-color: rgb(255, 186, 104);
+    @include longShadow(darken($color2, 10%));
+    background-color: $color2 !important;
 }
 
 .code-card-wrap a:nth-child(4n - 2) .gen-logo {
-    text-shadow: rgb(32, 143, 79) 0px 0px 0px, rgb(33, 145, 80) 1px 1px 0px, rgb(33, 147, 81) 2px 2px 0px, rgb(34, 149, 82) 3px 3px 0px, rgb(34, 151, 84) 4px 4px 0px, rgb(35, 153, 85) 5px 5px 0px, rgb(35, 155, 86) 6px 6px 0px, rgb(35, 157, 87) 7px 7px 0px, rgb(36, 159, 88) 8px 8px 0px, rgb(36, 161, 89) 9px 9px 0px, rgb(37, 163, 90) 10px 10px 0px, rgb(37, 165, 92) 11px 11px 0px, rgb(38, 167, 93) 12px 12px 0px, rgb(38, 169, 94) 13px 13px 0px, rgb(39, 171, 95) 14px 14px 0px, rgb(39, 173, 96) 15px 15px 0px, rgb(40, 175, 97) 16px 16px 0px, rgb(40, 177, 98) 17px 17px 0px, rgb(40, 180, 99) 18px 18px 0px, rgb(41, 182, 101) 19px 19px 0px, rgb(41, 184, 102) 20px 20px 0px, rgb(42, 186, 103) 21px 21px 0px, rgb(42, 188, 104) 22px 22px 0px, rgb(43, 190, 105) 23px 23px 0px, rgb(43, 192, 106) 24px 24px 0px, rgb(44, 194, 107) 25px 25px 0px, rgb(44, 196, 108) 26px 26px 0px, rgb(45, 198, 110) 27px 27px 0px, rgb(45, 200, 111) 28px 28px 0px, rgb(46, 202, 112) 29px 29px 0px;
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    height: 300px;
-    width: 300px;
-    line-height: 300px;
-    border-radius: 0%;
-    text-align: center;
-    background-color: rgb(46, 204, 113)
+    @include longShadow(darken($color3, 10%));
+    background-color: $color3 !important;
 }
 
 .code-card-wrap a:nth-child(4n - 3) .gen-logo {
-    text-shadow: rgb(109, 62, 127) 0px 0px 0px, rgb(110, 63, 129) 1px 1px 0px, rgb(112, 64, 131) 2px 2px 0px, rgb(113, 65, 133) 3px 3px 0px, rgb(115, 66, 135) 4px 4px 0px, rgb(116, 67, 137) 5px 5px 0px, rgb(118, 68, 138) 6px 6px 0px, rgb(119, 69, 140) 7px 7px 0px, rgb(121, 69, 142) 8px 8px 0px, rgb(122, 70, 144) 9px 9px 0px, rgb(124, 71, 146) 10px 10px 0px, rgb(126, 72, 147) 11px 11px 0px, rgb(127, 73, 149) 12px 12px 0px, rgb(129, 74, 151) 13px 13px 0px, rgb(130, 75, 153) 14px 14px 0px, rgb(132, 76, 155) 15px 15px 0px, rgb(133, 77, 157) 16px 16px 0px, rgb(135, 77, 158) 17px 17px 0px, rgb(136, 78, 160) 18px 18px 0px, rgb(138, 79, 162) 19px 19px 0px, rgb(140, 80, 164) 20px 20px 0px, rgb(141, 81, 166) 21px 21px 0px, rgb(143, 82, 167) 22px 22px 0px, rgb(144, 83, 169) 23px 23px 0px, rgb(146, 84, 171) 24px 24px 0px, rgb(147, 85, 173) 25px 25px 0px, rgb(149, 85, 175) 26px 26px 0px, rgb(150, 86, 177) 27px 27px 0px, rgb(152, 87, 178) 28px 28px 0px, rgb(153, 88, 180) 29px 29px 0px;
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    height: 300px;
-    width: 300px;
-    line-height: 300px;
-    border-radius: 0%;
-    text-align: center;
-    background-color: rgb(155, 89, 182);
+    @include longShadow(darken($color4, 10%));
+    background-color: $color4 !important;
 }

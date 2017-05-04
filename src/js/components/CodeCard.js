@@ -5,7 +5,6 @@ import {
     CardTitle,
     CardText,
 } from 'material-ui/Card';
-import Easle from '../../img/easle.svg';
 import transitions from 'material-ui/styles/transitions';
 import MaterialTextLogo from './MaterialTextLogo'
 
@@ -21,11 +20,12 @@ class CodeCard extends Component {
         this.setState({zDepth: 0});
     };
     render() {
-        const {name, desc, date} = this.props
+        const {name, desc, date, logoIcon, logoText} = this.props
         const styles = {
             paper: {
                 transition: transitions.easeOut(),
-                width: '300px'
+                width: "300px",
+                maxWidth: "100vw"
             },
             date: {
                 color: "rgba(0,0,0,0.6)",
@@ -42,7 +42,7 @@ class CodeCard extends Component {
                 ...styles.paper
             }}>
                 <CardMedia>
-                    <MaterialTextLogo text={name} color="#f00" />
+                    <MaterialTextLogo text={logoText} icon={logoIcon} color="#f00" />
                 </CardMedia>
                 <CardTitle title={name} subtitle={desc}/>
                 <CardText style={styles.date}>{date}</CardText>

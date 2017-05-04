@@ -1,11 +1,13 @@
+.bg {}
+
 .arrow {
     position: absolute;
     padding: 0;
     font-size: 0;
     line-height: 0;
     top: 50%;
-    width: 60px;
-    height: 60px;
+    width: 96px;
+    height: 96px;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -15,14 +17,40 @@
     outline: 0;
     z-index: 2;
 }
-.arrow:hover {
 
+.slider-cont {
 }
 
+.arrow:hover {}
+
 .arrow-next {
-    right: -25px;
+    right: -48px;
 }
 
 .arrow-prev {
-    left: -25px
+    left: -48px;
+}
+
+$shadowColor: #000;
+.painting-img {
+}
+.slick-dots li button:before {
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: #fff;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #fff;
+}
+.slick-dots li button:focus:before, .slick-dots li button:hover:before {
+    opacity: 1;
 }

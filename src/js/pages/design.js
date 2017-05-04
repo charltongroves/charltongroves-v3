@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import ArtStore from "../stores/ArtStore"
+import DesignStore from "../stores/DesignStore"
 import ImageCarousel from '../components/ImageCarousel'
 import '../../css/art.css';
-class Art extends Component {
+class Design extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      art: ArtStore.getAllArt()
+      works: DesignStore.getAllWork()
     }
   }
   render() {
@@ -32,22 +32,23 @@ class Art extends Component {
       <div className="easeIn">
         <div style={styles.textCont}>
           <h1 style={styles.h1}>
-            I make art sometimes
+            I'm teaching myself design
           </h1>
           <h3 style={styles.h2}>
-            I like making cool drawings and paintings. 
-            It's purely just a hobby, but it has helped me gain an appreciation for design 
-            and figuring out what looks 'good' and 'bad'
+            My love of art and problem solving combine beautifully with design. I want the
+            software I make to be enjoyable to use. So for every project I undertake, I
+            apply what i've learnt so far in design with my skills as a visual artist to
+            produce insightful prototypes of my sofware.
           </h3>
           <p style={styles.h2}>
-            Take a look at some of my recent works below
+            Take a look at some of my design processes below.
           </p>
         </div>
 
-        <ImageCarousel photos={this.state.art}/>
+        <ImageCarousel photos={this.state.works}/>
       </div>
     );
   }
 }
 
-export default Art;
+export default Design;

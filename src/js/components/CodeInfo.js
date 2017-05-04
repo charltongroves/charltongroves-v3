@@ -73,10 +73,14 @@ class CodeInfo extends Component {
             },
             textCont: {
                 maxWidth: "100%",
-                flex: "2 0 20rem"
+                flex: "2 0 20rem",
+                marginRight: "1rem"
             },
             linksCont: {
                 flex: "1 0 0"
+            },
+            img: {
+                width: "100%"
             }
 
         }
@@ -90,7 +94,7 @@ class CodeInfo extends Component {
             : null
         return (
             <div className="easeIn" style={styles.cont}>
-                <div style={styles.greyOut}/>
+                <Link to="/code"><div style={styles.greyOut}/></Link>
                 <Paper style={styles.paper} zDepth={5} rounded={false}>
                     <Link to="/code">
                         <IconButton iconStyle={styles.mediumIcon} style={styles.mediumButton}>
@@ -100,6 +104,7 @@ class CodeInfo extends Component {
                     <div style={styles.contentCont}>
                         <div style={styles.textCont}>
                             <h1 style={styles.title}>{info.name}</h1>
+                            <img style={styles.img} src={info.imgurl} alt={info.name} />
                             <h2 style={styles.heading}>What
                             </h2>
                             <p style={styles.p}>{info.what}</p>

@@ -9,22 +9,28 @@ import About from './About.js'
 export default() =>
     <div className="parallax">
         <div className="easeIn parallax__layer parallax__layer__1">
-            <img src={Sixth}/>
+            <img alt="" src={Sixth}/>
         </div>
         <div className="easeIn parallax__layer parallax__layer__2">
-            <img src={Fifth}/>
+            <div className="hero-text-cont">
+                <h1>hello,</h1>
+                <h2>I'm charlie.</h2>
+                <h3>I write software and make it look cool.</h3>
+                <h4>scroll down to read more</h4>
+                </div>
+            <img alt="" src={Fifth}/>
         </div>
         <div className="easeIn parallax__layer parallax__layer__3">
-            <img src={Fourth}/>
+            <img alt="" src={Fourth}/>
         </div>
         <div className="easeIn parallax__layer parallax__layer__4">
-            <img src={Third}/>
+            <img alt="" src={Third}/>
         </div>
         <div className="easeIn parallax__layer parallax__layer__5">
-            <img src={Second}/>
+            <img alt="" src={Second}/>
         </div>
         <div className="easeIn parallax__layer parallax__layer__6">
-            <img src={First}/>
+            <img alt="" src={First}/>
         </div>
         <div className="parallax__cover">
             <About />

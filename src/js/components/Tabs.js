@@ -30,7 +30,7 @@ class MaterialTabs extends Component {
     getInitIndex() {
         var index = 0
         for (let tab of this.state.tabs) {
-            if (this.state.currentRoute.indexOf(tab.route) != -1) {
+            if (this.state.currentRoute.indexOf(tab.route) !== -1) {
                 index = tab.index
             }
         }

@@ -1,16 +1,14 @@
-* {
+  * {
   box-sizing: border-box;
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: visible;
 }
 
-html,
-body {
-  font-family: 'Lato', sans-serif;
-}
-
+$break-mobile: 700px;
+$perspective: 100px;
+$vertOffset: 0px;
 .heroText {
   font-size: 8rem;
   color: rgba(255, 255, 255, 0.8);
@@ -28,10 +26,10 @@ body {
 }
 
 .parallax {
-  perspective: 80px;
+  perspective: $perspective;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: visible;
   position: fixed;
   top: 0;
   left: 50%;
@@ -42,9 +40,9 @@ body {
 
 .parallax__layer {
   position: absolute;
-  top: -150px;
+  top: -1* $vertOffset;
   right: 0;
-  bottom: 150px;
+  bottom: $vertOffset;
   left: 0;
   animation-name: display;
   animation-fill-mode: forwards;
@@ -55,38 +53,80 @@ body {
     position: absolute;
     bottom: 0;
   }
-}
-
-.parallax__cover {
-  background-color: hsl(138, 53%, 10%);
-  position: absolute;
-  top: calc(100% - 152px);
-  left: 0;
-  right: 0;
-  height: 130vh;
-  z-index: 2;
-}
-
-
-$parallax__layers: 6;
-@for $i from 1 through $parallax__layers {
-  $x: ($parallax__layers - $i) / 2;
-  $bright: (($parallax__layers - $i)/6.0);
-  .parallax__layer__#{$i} {
-    transform: translateZ(-100 * $x#{px}) scale($x + 1);
-    animation-name: display;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-    animation-delay: $x * 0.4s;
-    animation-duration: 0.5s;
-    img {
-      filter: hue-rotate(200deg)
+  .hero-text-cont {
+    display: block;
+    position: absolute;
+    width: 3000px;
+    text-align: center;
+    color: #fff;
+    bottom: 320px;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 1px;
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 7rem;
+      margin: 0;
+      font-weight: 100;
+    }
+    h3 {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 300;
+    }
+    h4 {
+      font-size: 1rem;
+      margin: 1rem 0;
+      font-weight: 500;
+    }
+    @media screen and (max-width: $break-mobile) {
+      bottom: 290px;
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 4rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+    }
     }
   }
-}
-
-@keyframes display {
-  to {
-    opacity: 1;
+  $vertOffset: 150px;
+  .parallax__cover {
+    background-color: hsl(138, 53%, 10%);
+    position: absolute;
+    top: 99%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90vh;
+    z-index: 2;
   }
-}
+  $parallax__layers: 6;
+  @for $i from 1 through $parallax__layers {
+    $x: ($parallax__layers - $i) / 3;
+    $bright: (($parallax__layers - $i)/6.0);
+    .parallax__layer__#{$i} {
+      transform: translateZ(-1 * $perspective * $x) scale($x + 1);
+      animation-name: display;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease;
+      animation-delay: $x * 0.4s;
+      animation-duration: 0.5s;
+      img {
+        filter: hue-rotate(200deg)
+      }
+    }
+  }
+  @keyframes display {
+    to {
+      opacity: 1;
+    }
+  }
