@@ -9,11 +9,15 @@ class CodeInfo extends Component {
         this.state = {
             info: this.props.info
         }
-        console.log(props)
+        console.log(this.state.info)
     }
     componentWillReceiveProps(props) {
-        this.setState({name: this.props.name});
-        console.log("SCREAM")
+        this.setState({name: props.name});
+        /*Convoluted way to check if object is empty, ecma 5+ compatible*/
+        if (!(Object.keys(props.info).length === 0 && props.info.constructor === Object)) {
+            console.log("FIRED");
+            this.setState({info: props.info})
+        }
     }
     render() {
 
@@ -77,18 +81,23 @@ class CodeInfo extends Component {
                 marginRight: "1rem"
             },
             linksCont: {
-                flex: "1 0 0",
+                flex: "1 0 0"
             },
             textWrap: {
                 maxWidth: "300px",
-                wordWrap: "break-word",
+                wordWrap: "break-word"
             },
             img: {
                 width: "100%"
             }
 
         }
+        console.log("Printing info")
+        console.log(this.state.info)
         const info = this.state.info
+        const ProjectImage = (info.imgurl)
+            ? <img style={styles.img} src={info.imgurl} alt={info.name}/>
+            : <div/>
         const demo = (info.demo)
             ? <div style={styles.textWrap}>
                     <h3>Demo</h3>
@@ -97,7 +106,7 @@ class CodeInfo extends Component {
                 </div>
             : null
         return (
-            <div className="easeIn" style={styles.cont}>
+            <div style={styles.cont}>
                 <Link to="/code"><div style={styles.greyOut}/></Link>
                 <Paper style={styles.paper} zDepth={5} rounded={false}>
                     <Link to="/code">
@@ -108,7 +117,7 @@ class CodeInfo extends Component {
                     <div style={styles.contentCont}>
                         <div style={styles.textCont}>
                             <h1 style={styles.title}>{info.name}</h1>
-                            <img style={styles.img} src={info.imgurl} alt={info.name} />
+                            {ProjectImage}
                             <h2 style={styles.heading}>What
                             </h2>
                             <p style={styles.p}>{info.what}</p>

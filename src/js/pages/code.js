@@ -31,12 +31,11 @@ class Code extends Component {
     const cardStyle = {
       margin: "12px"
     }
-    const CardOverlay = (this.state.cardActiveName)
-      ? <CodeInfo info={this.getActiveCodeCard()}/>
-      : null
-    const disableScroll = (CardOverlay)
-      ? {
-      }
+    const CardOverlayHidden = (this.state.cardActiveName)
+      ? "card-overlay card-overlay-show"
+      : "card-overlay card-overlay-hide"
+    const CodeInfoProps = (this.state.cardActiveName)
+      ? this.getActiveCodeCard()
       : {}
     const containerStyle = {
       display: "flex",
@@ -51,7 +50,10 @@ class Code extends Component {
       .codeCards
       .map((codeCard) => {
         return (
-          <Link key={codeCard.name} to={currentRoute + "/" + codeCard.name} onClick={this.handleOnLinkClick}>
+          <Link
+            key={codeCard.name}
+            to={currentRoute + "/" + codeCard.name}
+            onClick={this.handleOnLinkClick}>
             <CodeCard style={cardStyle} key={codeCard.name} {...codeCard}/>
           </Link>
         );
@@ -61,7 +63,7 @@ class Code extends Component {
         color: "#fff",
         fontWeight: 300
       },
-      h2 :{
+      h2: {
         color: "#fff",
         fontWeight: 300
       },
@@ -75,25 +77,29 @@ class Code extends Component {
       },
       newLine: {
         width: "100%"
-      },
+      }
     }
     return (
-      <div
-        className="easeIn"
-       >
-        {CardOverlay}
+      <div className="easeIn">
+        <div className={CardOverlayHidden}>
+          <CodeInfo info={CodeInfoProps}/>
+        </div>
         <div style={styles.newLine}>
-        <div style={styles.textCont}>
-            <h1 style={styles.h1}> I love programming </h1>
-            <h3 style={styles.h2}> I have experience in front end engineering, backend engineering, data analysis, systems programming, and large scale OOP programming </h3>
-            <p style={styles.h2}> Take a look at some of my recent projects below </p>
+          <div style={styles.textCont}>
+            <h1 style={styles.h1}>
+              I love programming
+            </h1>
+            <h3 style={styles.h2}>
+              I have experience in front end engineering, backend engineering, data analysis,
+              systems programming, and large scale OOP programming
+            </h3>
+            <p style={styles.h2}>
+              Take a look at some of my recent projects below
+            </p>
+          </div>
         </div>
-        </div>
-        <div  style={{
-        ...containerStyle,
-        ...disableScroll
-      }} className="code-card-wrap" >
-        {CodeCardComponents}
+        <div style={containerStyle} className="code-card-wrap">
+          {CodeCardComponents}
         </div>
       </div>
     );

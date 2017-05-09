@@ -23,7 +23,18 @@ $shadowleng: 10;
 @mixin longShadow($color) {
     text-shadow: setLongShadow($color, $shadowleng);
 }
-
+.card-overlay div {
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease !important;
+}
+.card-overlay-show div {
+    opacity: 1;
+    transition-delay:0s !important;
+    visibility: visible;
+}
+.card-overlay-hide div {
+    opacity: 0;
+    visibility: hidden;
+}
 .icon-logo {
     font-size: 180px !important;
     color: #fff !important;

@@ -6,6 +6,7 @@ import HomePage from './home'
 import ArtPage from './art'
 import CodePage from './code'
 import DesignPage from './design'
+import RedirectDriveSafe from '../components/RedirectDriveSafe'
 
 class Layout extends Component {
   constructor (props) {
@@ -24,6 +25,7 @@ class Layout extends Component {
           <Route path='/code/:cardName'  component={CodePage}/>
           <Route path='/art'  component={ArtPage}/>
           <Route path='/design' component={DesignPage}/>
+          <Route path='/prog/drivesafe' component={RedirectDriveSafe}/>
         </Switch>
       </div>
     );

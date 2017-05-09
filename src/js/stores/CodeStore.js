@@ -35,7 +35,7 @@ class CodeStore extends EventEmitter {
                 name: "charltongroves v3",
                 desc: "the website you're looking at right now",
                 date: "may 2017 - apr 2017",
-                imgurl: "../../img/logo.svg",
+                imgurl: "",
                 what: "This is my 3rd attempt at a personal portfolio site for myself",
                 how: "This website was made using react. I used some Material UI componenets, and I im" +
                         "plemented the parralax landscape thing on the homepage using a method from some " +
@@ -93,7 +93,7 @@ class CodeStore extends EventEmitter {
                 name: "Pings",
                 desc: "A small ruby api that grabs device pings from a postgres db",
                 date: "mar 2017",
-                imgurl: "../../img/logo.svg",
+                imgurl: "",
                 what: "A small ruby api that grabs device pings from a postgres db. It allows the user " +
                         "to grab pings from a ceratain date, device, and/or range of dates",
                 how: "Pings was written in Ruby using the sinatra microframework. It uses activerecord" +
@@ -110,7 +110,7 @@ class CodeStore extends EventEmitter {
                 desc: "A scalable python script that parses user settings csv documents and analyzes th" +
                         "em",
                 date: "mar 2017",
-                imgurl: "../../img/logo.svg",
+                imgurl: "",
                 what: "A scalable python script that parses user settings csv documents and analyzes th" +
                         "em",
                 how: "Analysis was written in python, it uses the sciPy stack to generate some pretty " +
@@ -182,7 +182,7 @@ class CodeStore extends EventEmitter {
                 name: "Tetris",
                 desc: "A remake of the classic game tetris on an atmel 74HC chipset",
                 date: "apr 2016",
-                imgurl: "../../img/logo.svg",
+                imgurl: "",
                 what: "A remake of the classic game tetris on an atmel 74HC chipset. The game contained" +
                         " features such as high score tracking, 8 bit sound, and joystick support",
                 how: "The game was written in C using the atmel studio IDE.",
@@ -206,7 +206,7 @@ class CodeStore extends EventEmitter {
             name: "",
             desc: "",
             date: "",
-            imgurl: "../../img/logo.svg",
+            imgurl: "",
             what: "",
             how: "",
             why: "",
