@@ -191,7 +191,7 @@ class CodeStore extends EventEmitter {
                         "e code. From this we had a few weeks to implement as many features as we could.",
                 techs: "the C programming language",
                 github: "",
-                demo: "",
+                demo: "https://zippy.gfycat.com/AdmirableBossyEuropeanfiresalamander.webm",
                 logoIcon: "games",
                 logoText: "",
                 photo: ""

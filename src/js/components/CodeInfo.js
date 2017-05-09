@@ -77,7 +77,11 @@ class CodeInfo extends Component {
                 marginRight: "1rem"
             },
             linksCont: {
-                flex: "1 0 0"
+                flex: "1 0 0",
+            },
+            textWrap: {
+                maxWidth: "300px",
+                wordWrap: "break-word",
             },
             img: {
                 width: "100%"
@@ -86,7 +90,7 @@ class CodeInfo extends Component {
         }
         const info = this.state.info
         const demo = (info.demo)
-            ? <div>
+            ? <div style={styles.textWrap}>
                     <h3>Demo</h3>
                     <a href={info.demo}>{info.demo}
                     </a>
@@ -116,10 +120,10 @@ class CodeInfo extends Component {
                             <p style={styles.p}>{info.why}</p>
                         </div>
                         <div style={styles.linksCont}>
-                            <h3>
+                            <h3 style={styles.textWrap}>
                                 Techs/Tools
                             </h3>
-                            <p>
+                            <p style={styles.textWrap}>
                                 {info.techs}
                             </p>
                             {demo}
