@@ -36,7 +36,7 @@ class About extends Component {
                 <div style={styles.align}>
                     <img src={Face} style={styles.face} alt="charlie groves"/>
                     <h1 style={styles.h}>Howdy</h1>
-                    <p style={styles.p}>I'm a software developer / designer based in Brisbane, Australia.
+                    <p style={styles.p}>I'm a software developer & designer based in Brisbane, Australia.
                         <br/>
                         I'm currently studying computer science at the University of Queensland
                         (graduate July 2018)</p>
@@ -51,7 +51,8 @@ class About extends Component {
                         the fields of software engineering, software development, and UI/UX design. 
                     </p>
                     <h1 style={styles.h}>Drop me a line</h1>
-                    <p style={styles.p}></p>
+                    <p style={styles.p}>Need some help with a software project? Or just want to chat about stuff? Get in touch :) </p>
+                    <p style={styles.p}><a href="mailto:charltongroves@gmail.com">charltongroves@gmail.com</a> - <a href="tel:0401001014">0401001014</a></p>
                 </div>
             </div>
         )

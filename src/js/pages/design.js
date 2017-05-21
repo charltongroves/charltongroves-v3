@@ -38,7 +38,7 @@ class Design extends Component {
             My love of art and problem solving combine beautifully with design. I want the
             software I make to be enjoyable to use. So for every project I undertake, I
             apply what i've learnt so far in design with my skills as a visual artist to
-            produce insightful prototypes of my sofware.
+            produce insightful paper prototypes.
           </h3>
           <p style={styles.h2}>
             Take a look at some of my design processes below.

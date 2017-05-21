@@ -60,8 +60,8 @@ class MaterialNav extends Component {
           <Link to={'/art'}>
             <MenuItem onTouchTap={this.handleClose}>Art</MenuItem>
           </Link>
-          <Link to={'/contact'}>
-            <MenuItem onTouchTap={this.handleClose}>Contact</MenuItem>
+          <Link to={'/design'}>
+            <MenuItem onTouchTap={this.handleClose}>Design</MenuItem>
           </Link>
         </Drawer>
       </div>

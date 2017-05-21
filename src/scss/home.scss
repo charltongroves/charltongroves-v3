@@ -110,6 +110,17 @@ $vertOffset: 0px;
     overflow-y: hidden;
     z-index: 2;
   }
+
+  .parallax__cover {
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #65BBDD;
+      text-decoration: none;
+    }
+  }
   $parallax__layers: 6;
   @for $i from 1 through $parallax__layers {
     $x: ($parallax__layers - $i) / 3;

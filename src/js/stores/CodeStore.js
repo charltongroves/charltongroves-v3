@@ -141,12 +141,16 @@ class CodeStore extends EventEmitter {
                                 name: "charltongroves v2",
                                 desc: "my personal website, written in html, JS, jQuery",
                                 date: "mar 2017 - jan 2017",
-                                imgurl: "../../img/logo.svg",
-                                what: "",
-                                how: "",
-                                why: "",
-                                techs: "",
-                                github: "",
+                                imgurl: "",
+                                what: "Personal website",
+                                how: "The website was implemented with raw html, css, and jquery. with no frameworks",
+                                why: "This was the second iteration of my personal website. I ditched my first templat" +
+                                                "ed website for something that I designed from the ground up. I drew out what i w" +
+                                                "anted it to look like and implemented that without the help of templates or exte" +
+                                                "rnal frameworks. It was an excellent challenge and taught me a lot about the fun" +
+                                                "damentals of front end engineering.",
+                                techs: "HTML, CSS, jQuery, JS",
+                                github: "https://github.com/charltongroves/charltongroves-v2",
                                 demo: "",
                                 logoIcon: "web",
                                 logoText: "",
@@ -187,7 +191,7 @@ class CodeStore extends EventEmitter {
                                                 "a lot throughout the design process, primarily, how important the requirements/p" +
                                                 "rototyping portion of software development. One miscommunication during that pha" +
                                                 "se can lead to a lot of clean up down the road...",
-                                techs: "",
+                                techs: "HTML, CSS, jQuery, JS",
                                 github: "",
                                 logoIcon: "",
                                 logoText: "RGA",

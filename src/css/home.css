@@ -91,6 +91,13 @@ html {
   overflow-y: hidden;
   z-index: 2; }
 
+.parallax__cover a {
+  color: #fff;
+  text-decoration: none; }
+.parallax__cover a:hover {
+  color: #65BBDD;
+  text-decoration: none; }
+
 .parallax__layer__1 {
   transform: translateZ(-166.66667px) scale(2.66667);
   animation-name: display;
