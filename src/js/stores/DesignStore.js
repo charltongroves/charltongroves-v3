@@ -1,113 +1,124 @@
 import {EventEmitter} from "events";
-
 class DesignStore extends EventEmitter {
-    constructor() {
-        super()
-        this.works = [
-            {
-                name: "syncUQ",
-                about: "",
-                process1: {
-                    img: "",
-                    notes: ""
-                },
-                process2: {
-                    img: "",
-                    notes: ""
-                },
-                process3: {
-                    img: "",
-                    notes: ""
-                },
-                final: {
-                    img: "",
-                    notes: ""
-                },
-                implementation: {
-                    link: "",
-                    img: "",
-                    notes: ""
-                }
-            }, {
-                name: "DriveSafe",
-                about: "",
-                process1: {
-                    img: "",
-                    notes: ""
-                },
-                process2: {
-                    img: "",
-                    notes: ""
-                },
-                process3: {
-                    img: "",
-                    notes: ""
-                },
-                final: {
-                    img: "",
-                    notes: ""
-                },
-                implementation: {
-                    link: "",
-                    img: "",
-                    notes: ""
-                }
-            }, {
-                name: "RGA",
-                about: "",
-                process1: {
-                    img: "",
-                    notes: ""
-                },
-                process2: {
-                    img: "",
-                    notes: ""
-                },
-                process3: {
-                    img: "",
-                    notes: ""
-                },
-                final: {
-                    img: "",
-                    notes: ""
-                },
-                implementation: {
-                    link: "",
-                    img: "",
-                    notes: ""
-                }
-            },
-        ];
+  constructor() {
+    super()
+    this.designCards = [
+      {
+        name: "DriveSafe",
+        desc: "Winning Hackthon prototype design",
+        date: "March 2017",
+        imgurl: "",
+        what: "",
+        how: "",
+        why: "",
+        process: [
+          {title: "process 1",
+            imgurl: "",
+            desc: "desc of process"
+          },
+          {title: "process 2",
+            imgurl: "",
+            desc: "desc of process"
+          },
+          {title: "process 3",
+            imgurl: "",
+            desc: "desc of process"
+          },
+        ],
+        demo: "",
+        photo: "",
+        logoIcon: "home",
+        logoText: ""
+      },
+      {
+        name: "This Website",
+        desc: "",
+        date: "",
+        imgurl: "",
+        what: "",
+        how: "",
+        why: "",
+        process: [
+          {title: "process 1",
+            imgurl: "",
+            desc: "desc of process"
+          },
+          {title: "process 2",
+            imgurl: "",
+            desc: "desc of process"
+          },
+          {title: "process 3",
+            imgurl: "",
+            desc: "desc of process"
+          },
+        ],
+        demo: "",
+        photo: "",
+        logoIcon: "website",
+        logoText: ""
+      },
+      {
+        name: "Adani",
+        desc: "",
+        date: "",
+        imgurl: "",
+        what: "",
+        how: "",
+        why: "",
+        process: [
+          {title: "process 1",
+            imgurl: "",
+            desc: "desc of process"
+          },
+          {title: "process 2",
+            imgurl: "",
+            desc: "desc of process"
+          },
+          {title: "process 3",
+            imgurl: "",
+            desc: "desc of process"
+          },
+        ],
+        demo: "",
+        photo: "",
+        logoIcon: "people",
+        logoText: ""
+      },
+
+    ];
+  }
+  getAllCards() {
+    return this.designCards;
+  }
+  getSampleCard() {
+    return {
+      name: "",
+      desc: "",
+      date: "",
+      imgurl: "",
+      what: "",
+      how: "",
+      why: "",
+      process: [
+        {title: "process 1",
+          imgurl: "",
+          desc: "desc of process"
+        },
+        {title: "process 2",
+          imgurl: "",
+          desc: "desc of process"
+        },
+        {title: "process 3",
+          imgurl: "",
+          desc: "desc of process"
+        },
+      ],
+      demo: "",
+      photo: "",
+      logoIcon: "",
+      logoText: ""
     }
-    getAllWork() {
-        return this.works;
-    }
-    getSampleArt() {
-        return {
-            title: "",
-            about: "",
-            process1: {
-                img: "",
-                notes: ""
-            },
-            process2: {
-                img: "",
-                notes: ""
-            },
-            process3: {
-                img: "",
-                notes: ""
-            },
-            final: {
-                img: "",
-                notes: ""
-            },
-            implementation: {
-                img: "",
-                notes: ""
-            }
-        }
-    }
+  }
 
 }
 const designStore = new DesignStore();

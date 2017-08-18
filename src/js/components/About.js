@@ -46,9 +46,8 @@ class About extends Component {
                         background in visual art and love to combine those skills with programming in
                         the form of UI/UX design.
                     </p>
-                    <h1 style={styles.h}>I want to work with you</h1>
-                    <p style={styles.p}>I am currently looking for internships and part time work in
-                        the fields of software engineering, software development, and UI/UX design. 
+                    <h1 style={styles.h}>I am currently employed</h1>
+                    <p style={styles.p}>I'm working as a full stack engineer at <a href="http://www.tanda.co">Tanda</a>, an amazing SaaS company based in Brisbane that creates workforce management software.
                     </p>
                     <h1 style={styles.h}>Drop me a line</h1>
                     <p style={styles.p}>Need some help with a software project? Or just want to chat about stuff? Get in touch :) </p>

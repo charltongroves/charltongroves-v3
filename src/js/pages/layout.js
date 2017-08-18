@@ -24,7 +24,8 @@ class Layout extends Component {
           <Route exact path='/code'  component={CodePage}/>
           <Route path='/code/:cardName'  component={CodePage}/>
           <Route path='/art'  component={ArtPage}/>
-          <Route path='/design' component={DesignPage}/>
+          <Route exact path='/design' component={DesignPage}/>
+          <Route path='/design/:cardName' component={DesignPage}/>
           <Route path='/prog/drivesafe' component={RedirectDriveSafe}/>
         </Switch>
       </div>
