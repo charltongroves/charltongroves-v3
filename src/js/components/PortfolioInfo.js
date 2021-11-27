@@ -98,17 +98,8 @@ class PortfolioInfo extends Component {
     console.log("Printing info");
     console.log(this.state.info);
     const info = this.state.info;
-    function constructProcess(process) {
-      return (
-        <div key={process.title} className="process-container">
-          <h3 className="process-header">{process.title}</h3>
-          <img style={styles.img} src={process.imgurl} alt={process.title} />
-          <h3 className="process-desc">{process.desc}</h3>
-        </div>
-      );
-    }
-    const ProjectProcess = info.process ? (
-      info.process.map((process) => constructProcess(process))
+    const ProjectImage = info.imgurl ? (
+      <img style={styles.img} src={info.imgurl} alt={info.name} />
     ) : (
       <div />
     );
@@ -120,11 +111,11 @@ class PortfolioInfo extends Component {
     ) : null;
     return (
       <div style={styles.cont}>
-        <Link to="/design">
+        <Link to="/portfolio">
           <div style={styles.greyOut} />
         </Link>
         <Paper style={styles.paper} zDepth={5} rounded={false}>
-          <Link to="/design">
+          <Link to="/portfolio">
             <IconButton
               iconStyle={styles.mediumIcon}
               style={styles.mediumButton}
@@ -135,15 +126,17 @@ class PortfolioInfo extends Component {
           <div style={styles.contentCont}>
             <div style={styles.textCont}>
               <h1 style={styles.title}>{info.name}</h1>
-              {ProjectProcess}
-            </div>
-            <div style={styles.linksCont}>
+              {ProjectImage}
               <h2 style={styles.heading}>What</h2>
               <p style={styles.p}>{info.what}</p>
               <h2 style={styles.heading}>How</h2>
               <p style={styles.p}>{info.how}</p>
               <h2 style={styles.heading}>Why</h2>
               <p style={styles.p}>{info.why}</p>
+            </div>
+            <div style={styles.linksCont}>
+              <h3 style={styles.textWrap}>Techs/Tools</h3>
+              <p style={styles.textWrap}>{info.techs}</p>
               {demo}
             </div>
           </div>
